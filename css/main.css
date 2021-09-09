@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Iropke Batang', 'Noto Sans KR', sans-serif;
+  min-width: 32rem;
+}
+
+/* Common Class */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+}
+
+/* Header */
+.header {
+  position: relative;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  display: block;
+}
