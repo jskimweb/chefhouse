@@ -1,4 +1,40 @@
 window.onload = function () {
+	// go-top
+	$(window).scroll(function () {
+		var sT = $(window).scrollTop();
+		if (sT > 100) {
+			$('.go-top').addClass('go-top--show');
+		} else {
+			$('.go-top').removeClass('go-top--show');
+		}
+		$('.go-top').click(function () {
+			$('html,body').animate({
+				scrollTop: 0
+			});
+		});
+	});
+
+	// header fix
+	$(window).scroll(function () {
+		var sT = $(window).scrollTop();
+		if (sT >= 38)
+		{
+			$('.header-top').hide();
+			$('.header-main').addClass('header-main--scr');
+			$('.header-main').find('.container').addClass('container--scr');
+			$('.header__logo').addClass('header__logo--scr');
+			$('.gnb__menu').addClass('gnb__menu--scr');
+			$('.header__order').addClass('header__order-scr');
+		} else {
+			$('.header-top').show();
+			$('.header-main').removeClass('header-main--scr');
+			$('.header-main').find('.container').removeClass('container--scr');
+			$('.header__logo').removeClass('header__logo--scr');
+			$('.gnb__menu').removeClass('gnb__menu--scr');
+			$('.header__order').removeClass('header__order-scr');
+		}
+	})
+
 	// Visual slide
 	var sw_visual = new Swiper('.sw-visual', {
 		loop: true,

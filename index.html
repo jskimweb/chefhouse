@@ -23,6 +23,10 @@
 </head>
 
 <body>
+  <!-- Go-top -->
+  <button class="go-top">TOP</button>
+  <!--// Go-top -->
+
   <div class="wrap">
     <!-- Header -->
     <header class="header">
@@ -38,7 +42,9 @@
       </div>
       <div class="header-main">
         <div class="container clearfix">
-          <a href="index.html" class="header__logo">로고</a>
+          <a href="index.html" class="header__logo">
+            <img src="images/logo.png" alt="로고">
+          </a>
           <nav class="gnb">
             <a href="#" class="gnb__menu">브랜드</a>
             <a href="#" class="gnb__menu">도시락</a>
@@ -92,7 +98,7 @@
       <div class="container">
         <h2 class="sec__tit">HOUSE MENU</h2>
         <span class="sec__desc">엄선된 재료로 선택한 프리미엄 도시락</span>
-        <div class="sec-cont">
+        <div class="sec-cont" data-aos="custom">
           <div class="swiper-container sw-menu-img">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -144,7 +150,7 @@
       <div class="container">
         <h2 class="sec__tit">BRAND STORY</h2>
         <span class="sec__desc">모두가 상생할 수 있는 방향을 제시하다</span>
-        <div class="sec-cont">
+        <div class="sec-cont" data-aos="custom">
           <a href="#" class="story-box">
             <div class="story-box-cont">
               <span class="story-box__img story-box__img--1"></span>
@@ -190,9 +196,9 @@
         <h2 class="sec__tit">HOUSE NEWS</h2>
         <span class="sec__desc">셰프하우스의 새소식입니다</span>
         <div class="sec-cont">
-          <div class="news-left"></div>
+          <div class="news-left" data-aos="custom"></div>
           <div class="news-right">
-            <div class="news-top">
+            <div class="news-top" data-aos="custom">
               <h3 class="news__tit">공지사항</h3>
               <a href="#" class="news__more"></a>
               <p class="news-post">
@@ -200,7 +206,7 @@
                 <span class="news-post__date">2019-07-30</span>
               </p>
             </div>
-            <div class="news-bot">
+            <div class="news-bot" data-aos="custom">
               <h3 class="news__tit">고객센터</h3>
               <a href="#" class="news__more"></a>
               <span class="news__call">1599-8783</span>
@@ -217,7 +223,7 @@
 
     <!-- Review -->
     <section class="review">
-      <div class="container">
+      <div class="container" data-aos="custom">
         <div class="review-tit-box">
           <h3 class="review__tit">
             리얼후기<br>
@@ -297,14 +303,23 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-
+        <a href="#" class="footer__poli">개인정보처리방침</a>
+        <span class="footer__time">고객센터 1599-8783 (이용시간 평일 09:00~18:00 / 단, 매월 둘째주 수요일 09:00~17:30)</span>
+        <p class="footer-info">
+          <span class="footer__ceo">대표자 : 이종열</span>
+          <span class="footer__addr">인천광역시 미추홀구 용현동 181-17 1층 셰프하우스</span>
+        </p>
+        <span class="footer__copy">COPYRIGHT&copy;CHEFHOUSE. ALL RIGHTS RESERVED.</span>
       </div>
     </footer>
     <!--// Footer -->
   </div>
 
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 1600,
+      once: true,
+    });
   </script>
 </body>
 
