@@ -136,6 +136,7 @@ body {
   display: block;
   width: 100%;
   z-index: 999999;
+  padding: 0 2rem;
 }
 
 .header-top {
@@ -188,10 +189,12 @@ body {
 
 .header-main--scr {
   position: fixed;
+  left: 0;
   top: 0;
   width: 100%;
   height: 7rem;
   background-color: #fff;
+  padding: 0 3rem
 }
 
 .header-main .container {
@@ -199,7 +202,6 @@ body {
   height: 100%;
   background-color: #fff;
   border-radius: 6rem;
-  padding: 0 3rem;
 }
 
 .container--scr {
@@ -303,6 +305,15 @@ body {
   margin: 0 0 .3rem .8rem;
 }
 
+.m-gnb-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  display: none;
+  width: 3.8rem;
+  cursor: pointer;
+}
+
 /* Visual */
 .visual {
   position: relative;
@@ -315,32 +326,29 @@ body {
   height: 100vh;
 }
 
-.sw-visual__link {
+.sw-visual-link {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.sw-visual__link--1 {
+.sw-visual-link-1 {
   background: url('../images/visual-1.jpg') no-repeat center;
   background-size: cover;
 }
 
-.sw-visual__link--2 {
+.sw-visual-link-2 {
   background: url('../images/visual-2.jpg') no-repeat center;
   background-size: cover;
 }
 
-.sw-visual__link--3 {
+.sw-visual-link-3 {
   background: url('../images/visual-3.jpg') no-repeat center;
   background-size: cover;
 }
 
-.sw-visual__link .container {
-  height: 100%;
-}
-
-.sw-visual__txt {
+.sw-visual-txt-area {
   position: absolute;
   left: 50%;
   bottom: 9rem;
@@ -349,9 +357,13 @@ body {
   width: 120rem;
 }
 
-.sw-visual__txt img {
+.sw-visual__txt {
   width: 100%;
   height: auto;
+}
+
+.m-sw-visual__txt {
+  display: none;
 }
 
 .sw-visual-pg-area {
@@ -377,6 +389,10 @@ body {
   cursor: pointer;
   opacity: .5;
   transition: all .2s;
+}
+
+.sw-visual__pg-1 {
+  margin-left: 0;
 }
 
 .sw-visual__pg--focused {
@@ -408,11 +424,17 @@ body {
 }
 
 .sw-menu-img__img {
+  position: relative;
+  display: block;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .sw-menu-img__img img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: auto;
   height: 100%;
 }
@@ -444,6 +466,7 @@ body {
 
 .sw-menu__tit strong {
   font-size: 4.2rem;
+  line-height: 1.4;
   font-weight: 700;
 }
 
@@ -841,6 +864,8 @@ body {
 }
 
 .sw-review .swiper-slide {
+  width: 28.5rem;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -941,4 +966,314 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1.8rem;
   color: #626262;
+}
+
+@media screen and (max-width: 1280px) {
+
+  /* Common Class */
+  .container {
+    max-width: 95rem;
+  }
+
+  .sec {
+    padding: 7rem 0 8rem 0;
+  }
+
+  .sec__tit {
+    font-size: 5.2rem;
+  }
+
+  .sec__desc {
+    font-size: 1.9rem;
+  }
+
+  /* Header */
+  .header-top .container {
+    max-width: 120rem;
+  }
+
+  .header-main .container {
+    max-width: 120rem;
+  }
+
+  /* Visual */
+  .sw-visual-txt-area {
+    width: 95rem;
+  }
+
+  .sw-visual-pg-area {
+    right: calc(50% - 47.5rem);
+    bottom: 21rem;
+  }
+
+  /* HOUSE MENU */
+  .menu .sec-cont {
+    height: 50rem;
+  }
+
+  .sw-menu-img {
+    width: 44.4rem;
+  }
+
+  .sw-menu-txt {
+    width: 50.6rem;
+  }
+
+  .sw-menu__tit {
+    font-size: 3.2rem;
+  }
+
+  .sw-menu__tit strong {
+    font-size: 3.8rem;
+  }
+
+  .sw-menu__desc {
+    font-size: 1.9rem;
+  }
+
+  /* BRAND STORY */
+  .story .sec-cont {
+    height: 50rem;
+  }
+
+  .story-box {
+    margin-right: 2.25rem;
+  }
+
+  .story-box__tit {
+    font-size: 3.6rem;
+  }
+
+  .story-box__desc {
+    font-size: 1.7rem;
+  }
+
+  /* HOUSE NEWS */
+  .news .sec-cont {
+    height: 44.2rem;
+  }
+
+  .news-top {
+    height: 21.1rem;
+    padding: 5.65%;
+  }
+
+  .news__tit {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .news__more {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .news-post__tit {
+    font-size: 1.6rem;
+  }
+
+  .news-post__date {
+    font-size: 1.6rem;
+  }
+
+  .news-bot {
+    height: 21.1rem;
+    padding: 5.65%;
+  }
+
+  .news__call {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .news__time {
+    font-size: 1.6rem;
+  }
+
+  /* Review */
+  .review-tit-box {
+    width: 25rem;
+    height: 25rem;
+    padding: 3rem;
+  }
+
+  .review__tit {
+    font-size: 2.8rem;
+  }
+
+  .sw-review {
+    width: 68rem;
+    height: 25rem;
+  }
+
+  .sw-review .swiper-slide {
+    width: 25rem;
+  }
+
+  .sw-review-link img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 6rem 4rem;
+  }
+
+  .footer .container {
+    max-width: 120rem;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+
+  /* Header */
+  .gnb {
+    margin-right: 16.6rem;
+  }
+
+  .gnb__menu {
+    margin-left: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    padding-top: 6.1rem;
+  }
+
+  /* Common Class */
+  .sec {
+    padding: 6rem 0 7rem 0;
+  }
+
+  .sec__tit {
+    font-size: 4.6rem;
+  }
+
+  .sec__desc {
+    font-size: 1.8rem;
+  }
+
+  .sec-cont {
+    margin-top: 4rem;
+  }
+
+  /* Header */
+  .header-top {
+    display: none !important;
+  }
+
+  .header-main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    padding: 0;
+  }
+
+  .header .container {
+    box-sizing: content-box;
+    border-bottom: .1rem solid #cdd4da;
+    border-radius: 0;
+  }
+
+  .header__logo {
+    top: 1.4rem;
+    height: 3.4rem;
+    margin-left: 2rem;
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .header__order {
+    display: none;
+  }
+
+  .m-gnb-btn {
+    display: block;
+  }
+
+  /* Visual */
+  .sw-visual {
+    height: 48rem;
+  }
+
+  .sw-visual-txt-area {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .sw-visual__txt {
+    display: none;
+  }
+  
+  .m-sw-visual__txt {
+    display: block;
+    width: 25rem;
+    margin-bottom: 3rem;
+  }
+
+  .sw-visual-pg-area {
+    display: inline-block;
+    bottom: 3rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .sw-visual__pg {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+
+  /* HOUSE MENU */
+  .menu .sec-cont {
+    height: 45rem;
+  }
+
+  .sw-menu__tit {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .sw-menu__tit strong {
+    font-size: 3.6rem;
+  }
+
+  .sw-menu__desc {
+    font-size: 1.6rem;
+  }
+
+  .sw-menu__more {
+    bottom: 14%;
+    font-size: 1.6rem;
+  }
+
+  .sw-menu__prev {
+    right: 5.1rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 0;
+    background-size: 1.2rem auto;
+  }
+
+  .sw-menu__next {
+    width: 5rem;
+    height: 5rem;
+    background-size: 1.2rem auto;
+  }
+
+  /* BRAND STORY */
+
+  /* HOUSE NEWS */
+
+  /* Review */
 }
