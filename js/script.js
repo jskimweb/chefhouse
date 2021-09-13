@@ -1,5 +1,11 @@
 window.onload = function () {
-	// go-top
+	// AOS
+	AOS.init({
+		duration: 1600,
+		once: true,
+	});
+
+	// Go-top
 	$(window).scroll(function () {
 		var sT = $(window).scrollTop();
 		if (sT > 100) {
@@ -14,21 +20,21 @@ window.onload = function () {
 		});
 	});
 
-	// header fix
+	// Header fix
 	$(window).scroll(function () {
 		if (screen.width > 1023) {
 			var sT = $(window).scrollTop();
 			if (sT >= 38) {
+				$('.header').addClass('header--scr');
 				$('.header-top').hide();
 				$('.header-main').addClass('header-main--scr');
-				$('.header-main').find('.container').addClass('container--scr');
 				$('.header__logo').addClass('header__logo--scr');
 				$('.gnb__menu').addClass('gnb__menu--scr');
 				$('.header__order').addClass('header__order-scr');
 			} else {
+				$('.header').removeClass('header--scr');
 				$('.header-top').show();
 				$('.header-main').removeClass('header-main--scr');
-				$('.header-main').find('.container').removeClass('container--scr');
 				$('.header__logo').removeClass('header__logo--scr');
 				$('.gnb__menu').removeClass('gnb__menu--scr');
 				$('.header__order').removeClass('header__order-scr');
@@ -87,12 +93,16 @@ window.onload = function () {
 		$(this).addClass('sw-visual__pg--focused');
 	});
 
-	// menu slide
+	// Menu slide
 	var sw_menu_img = new Swiper('.sw-menu-img', {
 		loop: true,
 		navigation: {
 			prevEl: '.sw-menu__prev',
 			nextEl: '.sw-menu__next',
+		},
+		pagination: {
+			el: '.sw-menu-img__pg',
+			type: 'fraction',
 		},
 	});
 
@@ -107,14 +117,33 @@ window.onload = function () {
 	sw_menu_img.controller.control = sw_menu_txt;
 	sw_menu_txt.controller.control = sw_menu_img;
 
-	// review slide
-	var sw_review = new Swiper('.sw-review', {
+	// Story slide
+	new Swiper('.sw-story', {
+		slidesPerView: 'auto',
+		scrollbar: {
+			el: '.sw-story__bar',
+			draggable: true,
+		},
+		breakpoints: {
+			768: {
+				allowTouchMove: false,
+			}
+		},
+	})
+
+	// Review slide
+	new Swiper('.sw-review', {
 		loop: true,
 		slidesPerView: 'auto',
-		spaceBetween: 20,
+		spaceBetween: 10,
 		navigation: {
 			prevEl: '.sw-review__prev',
 			nextEl: '.sw-review__next',
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 20,
+			}
 		},
 	});
 }
