@@ -212,7 +212,7 @@
 		display: none;
 	}
 
-	.m-gnb__btn {
+	.m-gnb__open {
 		display: block;
 	}
 
@@ -369,7 +369,6 @@
 	}
 
 	/* HOUSE MENU */
-
 	.menu .sec-cont {
 		display: block;
 		height: auto;
@@ -448,11 +447,11 @@
 	.sw-story li {
 		width: 26rem;
 		margin: 0 1.5rem 0 0;
+		pointer-events: none; /* ??? */
 	}
 
 	.story-box {
 		padding: 8%;
-		pointer-events: none;
 	}
 
 	.story-box__img {
