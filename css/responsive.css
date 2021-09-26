@@ -447,7 +447,10 @@
 	.sw-story li {
 		width: 26rem;
 		margin: 0 1.5rem 0 0;
-		pointer-events: none; /* ??? */
+	}
+
+	.story-box-cover {
+		display: block;
 	}
 
 	.story-box {
